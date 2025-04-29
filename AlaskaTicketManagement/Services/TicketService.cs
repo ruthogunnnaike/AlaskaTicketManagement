@@ -131,6 +131,7 @@ namespace AlaskaTicketManagement.Services
         {
             var eventDetails = await _context.Events
                 .Include(e => e.Venue)
+                .Include(e => e.Tickets)
                 .FirstOrDefaultAsync(e => e.Id == eventId);
 
             if (eventDetails == null) return new();
@@ -145,5 +146,4 @@ namespace AlaskaTicketManagement.Services
                 }).ToList();
         }
     }
-
 }

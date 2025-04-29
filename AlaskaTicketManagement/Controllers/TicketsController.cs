@@ -31,9 +31,13 @@ namespace AlaskaTicketManagement.Controllers
 
                 return Ok(result);
             }
-            catch
+            catch (Exception ex) when (ex is ArgumentException || ex is InvalidOperationException)
             {
-                return StatusCode(500, Problem("An error occurred while processing your request."));
+                return BadRequest(Problem(ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, Problem(ex.Message));
             }
         }
 

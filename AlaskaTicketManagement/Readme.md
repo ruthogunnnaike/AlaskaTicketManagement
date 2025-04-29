@@ -1,4 +1,5 @@
-Here's the updated `README.md` with a new section explaining how to enable and use **Swagger** in the **AlaskaTicketManagement API**:
+This guide provides how to test this code. 
+You can run the test via a swagger API. Synthetic data `Events` and `Venue` has been generated so you can move directly to reservice tickets without having to create new Event or Venue. 
 
 ---
 
@@ -29,7 +30,7 @@ An ASP.NET Core Web API for managing concert ticket reservations, purchases, and
 ### Running the Project
 
 ```bash
-git clone https://github.com/yourusername/AlaskaTicketManagement.git
+git clone https://github.com/ruthogunnaike/AlaskaTicketManagement.git
 cd AlaskaTicketManagement
 dotnet restore
 dotnet run

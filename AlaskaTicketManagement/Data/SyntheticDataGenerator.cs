@@ -16,7 +16,7 @@ namespace AlaskaTicketManagement.Data
             _eventService = eventService;
         }
 
-        public async Task GenerateAsync(int venueCount = 3, int eventsPerVenue = 2)
+        public async Task GenerateAsync(int venueCount = 3, int eventsPerVenue = 8)
         {
             for (int v = 1; v <= venueCount; v++)
             {
@@ -43,6 +43,12 @@ namespace AlaskaTicketManagement.Data
                             {
                                 Type = "General",
                                 Price = 25,
+                                Quantity = 50
+                            },
+                            new TicketCategory
+                            {
+                                Type = "VIP",
+                                Price = 250,
                                 Quantity = 50
                             }
                         }
