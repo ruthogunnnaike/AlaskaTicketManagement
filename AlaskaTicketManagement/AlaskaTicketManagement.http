@@ -1,0 +1,19 @@
+@AlaskaTicketManagement_HostAddress = http://localhost:5281
+
+GET {{AlaskaTicketManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+### Create an Event
+POST {{AlaskaTicketManagement_HostAddress}}/api/v1/events
+Content-Type: application/json
+
+{
+  "name": "Rock Concert",
+  "venue": "Madison Square Garden",
+  "date": "2025-06-01T19:00:00",
+  "description": "Biggest rock event of the year!",
+  "capacity": 5000
+}
